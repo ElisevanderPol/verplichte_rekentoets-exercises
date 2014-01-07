@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+  <html data-require="math math-format">
+      <head>
+          <title>Toets 2F Vraag 3</title>
+          <script src="../khan-exercise.js"></script>
+      </head>
+      <body>
+          <div class="exercise">
+              <div class="vars">
+                  <var id="PICKFRUIT">randFromArray(['aardbeien', 'bananen', 'appels', 'spruitjes', 'avocados'])</var>
+                  <var id="PICKBOX">randFromArray(['doos', 'kist', 'krat'])</var>
+                  <var id="KILO">5</var>
+                  <var id="WEIGHT">randFromArray([0.1,0.2,0.3,0.4])</var>
+                  <var id="COST">WEIGHT*KILO</var>
+                  </span>
+              </div>
+
+              <div class="problems">
+                  <div id="problem-type-or-description">
+                      <p class="problem">Een <var>PICKBOX</var> <var>PICKFRUIT</var> kost <var>COST</var> euro.</p>
+                      <p class="question">Als een kilo <var>PICKFRUIT</var> <var>KILO</var> euro kost, hoeveel gram weegt een <var>PICKBOX</var> <var>PICKFRUIT</var> dan?</p>
+                      <p class="solution" data-type="decimal"><var>WEIGHT * 1000</var></p>
+                  </div>
+              </div>
+
+              <div class="hints">
+                  <p>We weten dat 1 kilo <var>PICKFRUIT</var> <var>KILO</var> euro kost. </p>
+                  <p>Dus, <var>KILO</var> euro per 1000 gram = <code>\frac{<var>KILO</var>}{1000}</code>.</p>
+                  <p>Dit kunnen we vereenvoudigen naar <code>\frac{1}{<var>1000/KILO</var>}</code>.</p>
+                  <p>Een <var>PICKBOX</var> kost <var>COST</var> euro.</p>
+                  <p>Als we de noemer in de breuk hierboven vermenigvuldigen met <var>COST</var> krijgen we het gewicht in gram.</p>
+                  <p><code><var>1000/KILO</var> \times <var>COST</var> </code></p>
+                  <p>= <code><var>(1000/KILO)*COST</var></code></p>
+                  <p>De <var>PICKBOX</var> <var>PICKFRUIT</var> weegt dus <var>WEIGHT * 1000</var> gram.</p>
+              </div>
+          </div>
+      </body>
+  </html>
