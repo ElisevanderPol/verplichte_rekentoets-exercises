@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+  <html data-require="math math-format">
+      <head>
+          <title>Toets 2F Vraag 28</title>
+          <script src="../khan-exercise.js"></script>
+      </head>
+      <body>
+          <div class="exercise">
+              <div class="vars">
+                  <var id="LENGTH">randFromArray([15,30,45])</var>
+                  <var id="TIME">LENGTH * randRange(10,20)</var>
+                  <var id="PEOPLE">randFromArray([50, 100, 150, 200, 250, 300, 350, 400, 500])</var>
+                  <var id="ATTRACTION">randFromArray(['de draaimolen', 'de achtbaan', 'het reuzenrad', 'het spookhuis'])</var>
+                  <var id="SEX">randFromArray([0,1])</var>
+                  <var id="OWNER">randFromArray(['Nadine', 'Jennifer', 'Marta', 'Rosanne'])</var>
+                  <var id="MOWNER">randFromArray(['Sander', 'Robrecht', 'Sergio', 'Nicholas'])</var>
+                  <var id="REASONS">randFromArray(["beschikt over genoeg geld", "kan genoeg mensen inhuren", "is door de eigenaar gevraagd", 'heeft genoeg tijd'])</var>
+                  <var id="BEGIN">randRange(0,10)</var>
+                  <var id="BEGINARR">['9:00','9:15','9:30','9:45','10:00','10:15','10:30','10:45','11:00','11:15','11:30']</var>
+                  <var id="BEGINTIME">BEGINARR[BEGIN]</var>
+                  <var id="ENDTIME">9 + 0.25 * BEGIN + TIME/60</var>
+                  <var id="MAXPEOPLE">(TIME/LENGTH)*PEOPLE</var>
+                  </span>
+              </div>
+
+              <div class="problems">
+                  <div id="problem-type-or-description">
+                      <p class="problem"><span data-if='SEX==0'><var>OWNER</var></span><span data-else><var>MOWNER</var></span> <var>REASONS</var> om <var>ATTRACTION</var> van <var>BEGINTIME</var> tot <var>floatToTime(ENDTIME)</var> uur open te houden. 
+                      E&eacute;n ritje in <var>ATTRACTION</var> duurt <span data-if="LENGTH==15">een kwartier</span><span data-else-if="LENGTH==30">een halfuur</span><span data-else>drie kwartier</span>. 
+                      <p class="question">Als <span data-if='SEX==0'><var>OWNER</var></span><span data-else><var>MOWNER</var></span> per ritje <var>PEOPLE</var> mensen kwijt kan, hoeveel mensen kan <span data-if="SEX==0">ze</span><span data-else>hij</span> dan maximaal bedienen?</p></p>
+                      <p class="solution" data-type="decimal"><var>MAXPEOPLE</var></p>
+                  </div>
+              </div>
+
+              <div class="hints">
+                 
+              </div>
+          </div>
+      </body>
+  </html>
