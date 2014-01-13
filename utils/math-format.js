@@ -603,38 +603,25 @@ $.extend(KhanUtil, {
     floatToTime: function(num){
       var stringed = num.toString();
       strArr = stringed.split('.');
-      console.log(strArr);
-      
       if(strArr[1] == 25){
-        //var mins == ':15';
         return strArr[0] + ':15';
       }
       else if(strArr[1] == 5){
-        //var mins == ':30';
         return strArr[0] + ':30';
       }
-      else if(strArr[1] == 45){
-        //var mins == ':45';
+      else if(strArr[1] == 75){
         return strArr[0] + ':45';
       }
       else{
-       // var mins == ':00';
        return strArr[0] + ':00';
       }
 
     },
     
-    lengthToRides: function(length, ride){
-      var rideLen = 0;
-      if (ride == 15){
-        rideLen == 25;
-      }
-      else if(ride == 30){
-        rideLen == 50;
-      }
-      else{
-        rideLen == 75
-      }
+    firstCap: function(str){
+      var first = str[0].toUpperCase();
+      
+      return first+str.substring(1);
     }
     
 });
